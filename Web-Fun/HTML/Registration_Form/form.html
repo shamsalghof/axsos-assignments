@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Rigestration Form</h1>
+    <form action="./" method="post">
+      <div>
+        <label for="fname">First Name:* </label>
+        <input type="text" name="fname" id="fname" />
+      </div>
+      <br />
+      <div>
+        <label for="lname">Last Name:* </label>
+        <input type="text" name="lname" id="lname" />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email Adress:* </label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <br />
+      <div>
+        <label for="pass">Password:* </label>
+        <input type="password" name="pass" id="pass" />
+      </div>
+      <br />
+      <div>
+        <label for="confirmpass">Confirm Password:* </label>
+        <input type="password" name="confirmpass" id="confirmpass" />
+      </div>
+      <br />
+      <div>
+        <label for="dob">Birthday:</label>
+        <input type="date" name="dob" id="dob" />
+      </div>
+      <br />
+      <div>
+        <label for="gender">Gender Identity:</label><br />
+        <input type="radio" name="gender" id="male" />Male
+        <input type="radio" name="gender" id="fmale" />Female
+        <input type="radio" name="gender" id="nonbin" />Non-Binary
+        <input type="radio" name="gender" id="notanswer" />I Prefer Not to
+        Answer
+      </div>
+      <br />
+      <div>
+        <label for="desc">A short Description Myself:</label><br />
+        <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+      </div>
+      <br />
+      <div>
+        <label for="lang">Favourite language:</label>
+        <select name="lang" id="lang">
+          <option value="js" selected>Java Script</option>
+          <option value="php" >php</option>
+          <option value="java" >Java</option>
+          <option value="c++" >C++</option>
+        </select>
+      </div><br>
+      <div>
+        <input type="checkbox" name="" id="" > <label for="">Yes, I would like to recieve periodic email updates</label>
+      </div><br>
+      <div>
+        <input type="submit" value="Create Account">
+      </div>
+      <p>*indicates a required feilds</p>
+    </form>
+  </body>
+</html>
