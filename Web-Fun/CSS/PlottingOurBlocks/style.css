@@ -24,17 +24,18 @@
     font-size: 0px;
     vertical-align: top;
     padding: 10px;
+    margin: 0px 13px;
 }
 .sub-content {
     height: 200px;
     width: 210px;
     background-color: yellow;
     display: inline-block;
-    margin: 8px;
+    margin: 11px;
 }
 #advertisement {
     height: 120px;
     width: 660px;
     background-color: purple;
-    margin: 10px;
+    margin: 10px 15px;
 }
