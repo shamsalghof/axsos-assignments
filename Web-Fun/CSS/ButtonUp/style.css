@@ -17,9 +17,9 @@ button{
     font-size: 15px;
 }
 .plus{
-    background-color: aqua;
+    background-color: #00d1b2;
     color: white;
-    border: 1px solid aqua;
+    border: 1px solid #00d1b2;
     border-radius: 50%;
     width:45px ;
     height: 45px;
