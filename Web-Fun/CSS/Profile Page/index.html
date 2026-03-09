@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="container">
+        <h1 class="nav-title">Profile</h1>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">My Profile</a></li>
+          <li><a href="#">Find Connections</a></li>
+          <li><button class="btn">Sign Out</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container main-content">
+      <div class="left">
+        <div class="card">
+          <div class="header"></div>
+
+          <img
+            class="profile-img"
+            src="static/icons/user-circle.png"
+            alt="profile"
+          />
+
+          <div class="content">
+            <h2>Jane Doe</h2>
+            <p class="location">
+              <img src="static/icons/map-marker.png" /> Seattle
+            </p>
+
+            <p>
+              Developer | Engineer | Problem Solver <br />
+              Master of shadows and the Internet!
+            </p>
+            <img src="./static/icons/gear.png" /><a href="#"> edit profile</a>
+          </div>
+        </div>
+
+        <div class="education">
+          <div class="edu-header"><p class="edu-content">Education</p></div>
+          <div class="edu-content">
+            <br />
+            <h3>Coding Dojo - Full-stack bootcamp</h3>
+            <br />
+            <h4>Dec 2019 - Mar 2020</h4>
+            <br />
+            <p>Triple Black belt in Python, MERN and C#...</p>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="connection-request">
+          <div class="requests-header">
+            <p class="conn-content"><span>2</span> Connection Requests</p>
+          </div>
+          <div class="requests-content">
+            <div class="request-row">
+              <div class="user">
+                <img src="./static/icons/user-circle.png" alt="User Icon" />
+                <span>Todd E</span>
+              </div>
+              <div>
+                <img src="./static/icons/accept-circle.png" alt="" />
+                <img src="./static/icons/close-circle.png" alt="" />
+              </div>
+            </div>
+            <div class="request-row">
+              <div class="user">
+                <img src="./static/icons/user-circle.png" alt="User Icon" />
+                <span>Phil K</span>
+              </div>
+              <div class="user">
+                <img src="./static/icons/accept-circle.png" alt="" />
+                <img src="./static/icons/close-circle.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="your-connections">
+          <div class="requests-header">
+            <p class="connection-ur-requests">
+              <span>500+</span> Your Connection
+            </p>
+          </div>
+          <div>
+            <div class="requests-content">
+              <div class="request-row">
+                <div class="user">
+                  <img src="./static/icons/user-circle.png" alt="User Icon" />
+                  <span>Arry Y</span>
+                </div>
+              </div>
+              <div class="request-row">
+                <div class="user">
+                  <img src="./static/icons/user-circle.png" alt="User Icon" />
+                  <span>Adrian D</span>
+                </div>
+              </div>
+              <div class="request-row">
+                <div class="user">
+                  <img src="./static/icons/user-circle.png" alt="User Icon" />
+                  <span>Todd E</span>
+                </div>
+              </div>
+              <div class="request-row">
+                <div class="user">
+                  <img src="./static/icons/user-circle.png" alt="User Icon" />
+                  <span>Anne J</span>
+                </div>
+              </div>
+            </div>
+            <div class="requests-header requests-footer">
+                <a href="">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
