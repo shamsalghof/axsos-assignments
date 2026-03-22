@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Likes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>Network</nav>
+      <div class="container">
+        <div class="col-left">
+          <div class="card left">
+            <div class="card-header left">
+              <img
+                src="./static/user-circle.png"
+                alt="user circle icon"
+                srcset=""
+              />
+              <h3>Neil M</h3>
+            </div>
+            <p>
+              I just set up this new discord bot, let me know what you all
+              think. <a href="">link</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-header">
+              <h3>Neil M</h3>
+              <p><span class="like">9 </span>Likes(s)</p>
+              <button onclick="addLikes(0)">like</button>
+            </div>
+            <p>
+              I just set up this new discord bot, let me know what you all
+              think. <a href="">link</a>
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Nichole K</h3>
+              <p><span class="like">12 </span>Likes(s)</p>
+              <button onclick="addLikes(1)">like</button>
+            </div>
+            <p>just finished my <a href="">next comic</a>, check it out</p>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Jim R</h3>
+              <p><span class="like">9 </span>Likes(s)</p>
+              <button onclick="addLikes(2)">like</button>
+            </div>
+            <p>
+              I cant stop listening to the <a href="">new album.</a> who else
+              liking it ?
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Eng Shammosa</h3>
+              <p><span class="like">0 </span>Likes(s)</p>
+              <button onclick="addLikes(3)">like</button>
+            </div>
+            <p>
+              I cant stop listening to the <a href="">new album.</a> who else
+              liking it ?
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
