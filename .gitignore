@@ -1,0 +1,6 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Or specifically for your path:
+python_stack/my_environments/py3Env/
