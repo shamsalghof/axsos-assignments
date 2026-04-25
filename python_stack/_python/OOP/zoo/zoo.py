@@ -1,92 +1,89 @@
 class Animal:
-    def __init__(self,name,age,health_care,happiness_level):
-        self.name=name
-        self.age=age
-        self.health_care=health_care
-        self.happiness_level=happiness_level
+    def __init__(self, name, age, health, happiness):
+        self.name = name
+        self.age = age
+        self.health = health
+        self.happiness = happiness
 
     def display_info(self):
-        print(f"This Animal is : {self.name} , Health Care is : {self.health_care} and Happiness Level is: {self.happiness_level}")
+        # print animal details
+        print(f"{self.name} | Health: {self.health} | Happiness: {self.happiness}")
 
-    def feed(self,health_care,happiness_level):
-        self.health_care=health_care+10;
-        self.happiness_level=happiness_level+10;
+    def feed(self):
+        # default behavior (can be overridden)
+        self.health += 5
+        self.happiness += 5
+
 
 class Lion(Animal):
-    def __init__(self, speed,name, age, health_care, happiness_level,):
-        super().__init__(name, age, health_care, happiness_level)
-        self.speed=speed
-    
-    def display_info(self):
-        return super().display_info()
+    def __init__(self, name, age, health, happiness, speed):
+        super().__init__(name, age, health, happiness)
+        self.speed = speed
 
     def feed(self):
-        self.happiness_level+=5
-        self.health_care+=10
+        self.health += 10
+        self.happiness += 5
+
 
 class Monkey(Animal):
-    def __init__(self, favourite_food,name, age, health_care, happiness_level):
-        super().__init__(name, age, health_care, happiness_level)
-        self.favourite_food=favourite_food
-
-    def display_info(self):
-        return super().display_info()
+    def __init__(self, name, age, health, happiness, favorite_food):
+        super().__init__(name, age, health, happiness)
+        self.favorite_food = favorite_food
 
     def feed(self):
-        self.happiness_level+=18
-        self.health_care+=20
+        self.health += 20
+        self.happiness += 18
+
 
 class Bear(Animal):
-    def __init__(self, weight,name, age, health_care, happiness_level):
-        super().__init__(name, age, health_care, happiness_level)
-        self.weight=weight
-
-    def display_info(self):
-        return super().display_info()
+    def __init__(self, name, age, health, happiness, weight):
+        super().__init__(name, age, health, happiness)
+        self.weight = weight
 
     def feed(self):
-        self.happiness_level+=12
-        self.health_care+=20
+        self.health += 20
+        self.happiness += 12
+
+
 class Tiger(Animal):
-    def __init__(self, color,name, age, health_care, happiness_level):
-        super().__init__(name, age, health_care, happiness_level)
-        self.color=color
-
-    def display_info(self):
-        return super().display_info()
+    def __init__(self, name, age, health, happiness, color):
+        super().__init__(name, age, health, happiness)
+        self.color = color
 
     def feed(self):
-        self.happiness_level+=14
-        self.health_care=+15
+        self.health += 15   
+        self.happiness += 14
+
 
 class Zoo:
-    def __init__(self, zoo_name):
-        self.animals = []
-        self.name = zoo_name
+    def __init__(self, name):
+        self.name = name
+        self.animals = []# store animals
 
     def add_animal(self, animal):
+            # add animal to zoo
         self.animals.append(animal)
 
-    def print_all_info(self):
-        print("-" * 30, self.name, "-" * 30)
+    def show_animals(self):
+        print(f"\n--- {self.name} ---")
         for animal in self.animals:
             animal.display_info()
 
     def feed_all(self):
-    # polymorphism: each animal has its own feed() behavior
+    
+        print("\nFeeding all animals...\n")
         for animal in self.animals:
-            animal.feed()
+            animal.feed()   #polymorphism happens here
 
-lion1 = Lion(100,"Nala",12,10,15)
-lion2=Lion(150,"Simba",15,14,12)
-tiger1 = Tiger("yellow","Rajah",21,18,17)
-tiger2=Tiger("yellow","sherekhan",21,18,17)
 
-zoo1 = Zoo("John's Zoo")
-zoo1.add_animal(lion1)
-zoo1.add_animal(lion2)
-zoo1.add_animal(tiger1)
-zoo1.add_animal(tiger2)
-zoo1.print_all_info()
-zoo1.feed_all()
-zoo1.print_all_info()
+
+zoo = Zoo("John's Zoo")
+
+zoo.add_animal(Lion("Simba", 5, 50, 40, 80))
+zoo.add_animal(Monkey("George", 3, 40, 60, "Banana"))
+zoo.add_animal(Bear("Baloo", 7, 70, 50, 300))
+zoo.add_animal(Tiger("Rajah", 6, 65, 45, "Orange"))
+
+zoo.show_animals()
+zoo.feed_all()
+zoo.show_animals()
