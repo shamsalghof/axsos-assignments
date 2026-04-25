@@ -1,82 +1,125 @@
-# Zoo Management System 🐾
+# 🐾 Zoo Management System (OOP in Python)
 
-## Overview
+## 📌 Overview
 
-This project is a simple Object-Oriented Programming (OOP) example in Python that simulates a zoo.
-It demonstrates key OOP concepts like:
+This project is a simple Zoo Management System built using **Object-Oriented Programming (OOP)** in Python.
+It demonstrates how different animal types can share common behavior while also having their own unique actions.
 
-* Inheritance
-* Polymorphism
-* Method overriding
+---
 
-## Classes
+## 🎯 Concepts Covered
 
-### 1. Animal (Base Class)
+* **Classes & Objects**
+* **Inheritance**
+* **Method Overriding**
+* **Polymorphism**
 
-Represents a general animal with:
+---
 
-* name
-* age
-* health_care
-* happiness_level
+## 🏗️ Project Structure
 
-### 2. Animal Subclasses
+### 🔹 Base Class: `Animal`
 
-Each animal has its own behavior for feeding:
+Represents a general animal with shared attributes:
+
+* `name`
+* `age`
+* `health`
+* `happiness`
+
+**Methods:**
+
+* `display_info()` → prints animal details
+* `feed()` → default behavior (can be overridden)
+
+---
+
+### 🔹 Subclasses (Inheritance)
+
+Each animal inherits from `Animal` and overrides `feed()`:
 
 * **Lion**
 * **Monkey**
 * **Bear**
 * **Tiger**
 
-Each subclass overrides the `feed()` method to simulate different effects.
+Each class defines its own feeding behavior, affecting health and happiness differently.
 
-### 3. Zoo
+---
 
-Manages a collection of animals:
+### 🔹 Zoo Class
 
-* `add_animal()` → adds animals
-* `print_all_info()` → displays all animals
-* `feed_all()` → feeds all animals (polymorphism in action)
+Manages a collection of animals.
 
-## Key Concept: Polymorphism
+**Methods:**
 
-The `feed_all()` method calls `feed()` on each animal,
-but each animal behaves differently depending on its class.
+* `add_animal(animal)` → adds an animal to the zoo
+* `show_animals()` → displays all animals
+* `feed_all()` → feeds all animals (**polymorphism happens here**)
 
-## Example Flow
+---
 
-1. Create animals
-2. Add them to the zoo
-3. Print their info
-4. Feed all animals
-5. Print updated info
+## 🔥 Polymorphism Explained
 
-## ⚠️ Note
-
-There is a small bug in the `Tiger` class:
+The `feed_all()` method loops through all animals:
 
 ```python
-self.health_care = +15
+for animal in self.animals:
+    animal.feed()
 ```
 
-This resets the value instead of increasing it.
-It should be:
+Even though the same method is called, each animal behaves differently based on its class.
+
+👉 This is **polymorphism**.
+
+---
+
+## ▶️ Example Usage
 
 ```python
-self.health_care += 15
-```
+zoo = Zoo("John's Zoo")
 
-## How to Run
+zoo.add_animal(Lion("Simba", 5, 50, 40, 80))
+zoo.add_animal(Monkey("George", 3, 40, 60, "Banana"))
+zoo.add_animal(Bear("Baloo", 7, 70, 50, 300))
+zoo.add_animal(Tiger("Rajah", 6, 65, 45, "Orange"))
 
-Simply run the Python file:
-
-```bash
-python your_file.py
+zoo.show_animals()
+zoo.feed_all()
+zoo.show_animals()
 ```
 
 ---
 
-## Author
+## ⚙️ How to Run
 
-Shams ✨
+1. Make sure Python is installed
+2. Run the file:
+
+```bash
+python zoo.py
+```
+
+---
+
+## ✅ Improvements from Original Version
+
+* Removed redundant methods
+* Fixed logical bugs
+* Simplified class design
+* Applied **clean polymorphism**
+* Improved readability
+
+---
+
+## 📌 Notes
+
+* The base `Animal` class provides a default `feed()` method.
+* Subclasses override it to create unique behaviors.
+* The system is easily extendable (you can add new animals anytime).
+
+---
+
+## 👨‍💻 Author
+
+Shams
