@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+<div class="card p-4" style="width: 500px;">
+    <h5 class="mb-4 text-center">Submitted Info</h5>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>{{name_on_template}}</td>
+        </tr>
+        <tr>
+            <td>Dojo Location</td>
+            <td>{{location_on_template}}</td>
+        </tr>
+        <tr>
+            <td>Favourite Language</td>
+            <td>{{language_on_template}}</td>
+        </tr>
+        <tr>
+            <td>Comment</td>
+            <td>{{comment_on_template}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{gender_on_template}}</td>
+        </tr>
+        <tr>
+            <td>Favourite Sport</td>
+            <td>{% for sport in fav_sport_on_template %} <ul><li>{{sport}}</li></ul>{% endfor %}</td>
+        </tr>
+    </table>
+
+
+    <a href="/">Go Back</a>
+</div>
+</body>
+</html>
